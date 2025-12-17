@@ -29,28 +29,28 @@ const skills = [
   // Frontend
   { name: "HTML5", level: 95, category: "frontend", icon: "html" },
   { name: "CSS3", level: 90, category: "frontend", icon: "css" },
-  { name: "SASS", level: 85, category: "frontend", icon: "sass" },
+  // { name: "SASS", level: 85, category: "frontend", icon: "sass" },
   { name: "JavaScript", level: 90, category: "frontend", icon: "javascript" },
   { name: "TypeScript", level: 75, category: "frontend", icon: "typescript" },
   { name: "React", level: 90, category: "frontend", icon: "react" },
-  { name: "Next.js", level: 75, category: "frontend", icon: "nextjs" },
+  // { name: "Next.js", level: 75, category: "frontend", icon: "nextjs" },
 
   // Backend
   { name: "Node.js", level: 90, category: "backend", icon: "nodejs" },
-  { name: "Express", level: 85, category: "backend", icon: "express" },
-  { name: "MongoDB", level: 90, category: "backend", icon: "mongodb" },
-  { name: "PostgreSQL", level: 65, category: "backend", icon: "postgresql" },
-  { name: "GraphQL", level: 60, category: "backend", icon: "graphql" },
+  // { name: "Express", level: 85, category: "backend", icon: "express" },
+  // { name: "MongoDB", level: 90, category: "backend", icon: "mongodb" },
+  // { name: "PostgreSQL", level: 65, category: "backend", icon: "postgresql" },
+  // { name: "GraphQL", level: 60, category: "backend", icon: "graphql" },
   { name: "Java", level: 60, category: "backend", icon: "java" },
   { name: "Python", level: 60, category: "backend", icon: "python" },
 
   // Tools
   { name: "Git", level: 90, category: "tools", icon: "git" },
   { name: "GitHub", level: 90, category: "tools", icon: "github" },
-  { name: "Docker", level: 70, category: "tools", icon: "docker" },
-  { name: "Firebase", level: 80, category: "tools", icon: "firebase" },
+  // { name: "Docker", level: 70, category: "tools", icon: "docker" },
+  // { name: "Firebase", level: 80, category: "tools", icon: "firebase" },
   { name: "VS Code", level: 95, category: "tools", icon: "vscode" },
-  { name: "Cleark", level: 90, category: "tools", icon: "cleark" },
+  // { name: "Cleark", level: 90, category: "tools", icon: "cleark" },
   { name: "SQL", level: 90, category: "tools", icon: "sql" },
   { name: "MySQL", level: 90, category: "tools", icon: "mysql" },
 ];
@@ -65,24 +65,24 @@ const categories = [
 const iconImages = {
   html: htmlIcon,
   css: cssIcon,
-  sass: sassIcon,
+  // sass: sassIcon,
   javascript: jsIcon,
   typescript: tsIcon,
   react: reactIcon,
   nextjs: nextjsIcon,
   nodejs: nodejsIcon,
-  express: expressIcon,
-  mongodb: mongodbIcon,
-  postgresql: postgresqlIcon,
-  graphql: graphqlIcon,
+  // express: expressIcon,
+  // mongodb: mongodbIcon,
+  // postgresql: postgresqlIcon,
+  // graphql: graphqlIcon,
   java: javaIcon,
   python: pythonIcon,
   git: gitIcon,
   github: githubIcon,
-  docker: dockerIcon,
-  firebase: firebaseIcon,
+  // docker: dockerIcon,
+  // firebase: firebaseIcon,
   vscode: vscodeIcon,
-  cleark: clearkIcon,
+  // cleark: clearkIcon,
   sql: SQLIcon,
   mysql: MySQLIcon,
 };
@@ -110,7 +110,7 @@ const InfiniteScrollSkills = ({ skills }) => {
       <motion.div
         className="flex gap-8 mb-8"
         animate={{ x: ["0%", "-100%"] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeIn" }}
       >
         {duplicatedSkills.map((skill, index) => (
           <div key={`${skill.name}-${index}`} className="flex-shrink-0 flex flex-col items-center gap-2">
@@ -125,7 +125,7 @@ const InfiniteScrollSkills = ({ skills }) => {
       <motion.div
         className="flex gap-8"
         animate={{ x: ["-100%", "0%"] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        transition={{ duration: 20, repeat: Infinity, ease: "circIn" }}
       >
         {[...duplicatedSkills].reverse().map((skill, index) => (
           <div key={`${skill.name}-reverse-${index}`} className="flex-shrink-0 flex flex-col items-center gap-2">

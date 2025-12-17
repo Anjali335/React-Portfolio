@@ -9,27 +9,22 @@ export const HeroSection = () => {
   const [displayedCode, setDisplayedCode] = useState("");
 
   const codeSnippets = [
-    "import { FullStackDeveloper } from 'sahil.dev';",
-    "",
+    "import { FullStackDeveloper } from ;",
     "const developer = new FullStackDeveloper({",
-    "  name: 'Sahil',",
+    "  name: 'Anjali',",
     "  stack: ['React', 'Next.js', 'Node.js', 'TypeScript'],",
     "  focus: 'Building scalable web applications',",
     "  status: 'Open to new opportunities'",
     "});",
-    "",
-    "await developer.launchPortfolio();",
-    "// Featured: E-commerce, SaaS, Enterprise, Startup MVPs",
-    "",
     "developer.connect();",
     "console.log('🚀 Let's build something exceptional together!');"
   ];
 
   const achievements = [
-    { number: "1+", label: "Years in Production", icon: <Shield className="h-3 w-3" /> },
-    { number: "15+", label: "Projects Delivered", icon: <TrendingUp className="h-3 w-3" /> },
-    { number: "100%", label: "Client Satisfaction", icon: <Award className="h-3 w-3" /> },
-    { number: "15+", label: "Projects completed", icon: <Zap className="h-3 w-3" /> }
+    // { number: "1+", label: "Years in Production", icon: <Shield className="h-3 w-3" /> },
+    // { number: "15+", label: "Projects Delivered", icon: <TrendingUp className="h-3 w-3" /> },
+    // { number: "100%", label: "Client Satisfaction", icon: <Award className="h-3 w-3" /> },
+    // { number: "15+", label: "Projects completed", icon: <Zap className="h-3 w-3" /> }
   ];
 
   useEffect(() => {
@@ -55,7 +50,7 @@ export const HeroSection = () => {
 
   const handleViewResume = () => {
     // Open resume in new tab
-    window.open('/Sahil-resume.pdf', '_blank', 'noopener,noreferrer');
+    window.open('/Anjali-resume.pdf', '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -104,14 +99,14 @@ export const HeroSection = () => {
             </motion.div>
 
             <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              <span className="block text-foreground">I'm Sahil</span>
+              <span className="block text-foreground">I'm Anjali</span>
               <motion.span className="block bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent mt-2" animate={{ backgroundPosition: ['0%', '100%', '0%'] }} transition={{ duration: 8, repeat: Infinity }} style={{ backgroundSize: '200% 100%' }}>
-                Full-Stack Engineer
+                 Web & Python Developer
               </motion.span>
             </motion.h1>
 
             <motion.p className="text-lg sm:text-xl text-muted-foreground mt-6 leading-relaxed max-w-2xl" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              I build <span className="text-primary font-semibold">high-performance web applications</span> that drive business growth. Specializing in React, Node.js, and scalable architecture for startups and enterprises.
+              I build <span className="text-primary font-semibold"> web applications</span> that drive business growth.  Familiar with python and working on n React, Node.js, and scalable architecture for startups and enterprises.
             </motion.p>
 
             <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-4 my-8" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
@@ -127,17 +122,17 @@ export const HeroSection = () => {
             </motion.div>
 
             <motion.div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
-              <motion.a href="#projects" className="group relative overflow-hidden px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-primary-foreground shadow-lg hover:shadow-xl text-sm flex items-center justify-center gap-3" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
-                <Code className="h-5 w-5" /> 
-                <span>View Case Studies</span>
-                <TrendingUp className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </motion.a>
+              {/* <motion.a href="#projects" className="group relative overflow-hidden px-8 py-4 rounded-xl font-semibold bg-gradient-to-r from-primary to-purple-600 text-primary-foreground shadow-lg hover:shadow-xl text-sm flex items-center justify-center gap-3" >
+                <Code className="h-5 w-5" />  */}
+                {/* <span>View Case Studies</span> */}
+                {/* <TrendingUp className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </motion.a> */}
               
-              <motion.a href="#contact" className="group relative overflow-hidden px-8 py-4 rounded-xl font-semibold border border-primary/50 text-foreground hover:border-primary transition-all duration-300 bg-background/80 backdrop-blur-sm text-sm flex items-center justify-center gap-3" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
+              {/* <motion.a href="#contact" className="group relative overflow-hidden px-8 py-4 rounded-xl font-semibold border border-primary/50 text-foreground hover:border-primary transition-all duration-300 bg-background/80 backdrop-blur-sm text-sm flex items-center justify-center gap-3" whileHover={{ scale: 1.05, y: -2 }} whileTap={{ scale: 0.95 }}>
                 <Mail className="h-4 w-4" /> 
                 <span>Technical Interview</span>
               </motion.a>
-              
+               */}
               <motion.button 
                 onClick={handleViewResume}
                 className="group relative overflow-hidden px-6 py-4 rounded-xl font-semibold border border-border text-muted-foreground hover:border-primary/30 transition-all duration-300 bg-background/60 backdrop-blur-sm text-sm flex items-center justify-center gap-2" 
@@ -151,7 +146,7 @@ export const HeroSection = () => {
 
             <motion.div className="mt-6 text-center lg:text-left" variants={{ hidden: { y: 30, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.8 } } }}>
               <div className="text-sm text-muted-foreground">
-                🚀 <span className="text-primary font-semibold">Available Immediately</span> for Full-Stack and Frontend roles
+                🚀 <span className="text-primary font-semibold">Available Immediately</span> for Web Development,Frontend roles and Python Develpoment roles
               </div>
             </motion.div>
           </div>

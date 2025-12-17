@@ -11,32 +11,34 @@ export const TestimonialSection = () => {
   const isInView = useInView(ref, { once: true });
 
   const testimonials = [
-    {
-      id: 1,
-      name: "Alex Johnson",
-      role: "Product Director at TechCorp",
-      content: `Working with Sahil was seamless from day one. Not only did they deliver a full-stack solution ahead of schedule, but they also communicated clearly throughout the project. It's rare to find a developer who understands both the tech and the business side so well`,
-      rating: 5,
-      image: "/testimonials/alex-johnson.png"
-    },
-    {
-      id: 2,
-      name: "Maria Chen",
-      role: "Senior UX Designer at DesignHub",
-      content: `I've reviewed hundreds of portfolios, and his work is truly exceptional. Tway the animations guide attention while maintaining performance is masterful. The gradient elements add depth without overwhelming.`,
-      rating: 5,
-      image: "/testimonials/maria-chen.png"
-    },
-    {
-      id: 3,
-      name: "David Wilson",
-      role: "CTO at Startup Ventures",
-      content: `From wireframes to deployment, Sahil owned the entire stack with confidence and creativity. The final product is fast, reliable, and looks incredible. I wouldn't hesitate to work with them again.`,
-      rating: 5,
-      image: "/testimonials/David Wilson.png"
-    },
+    // {
+    //   id: 1,
+    //   name: "Alex Johnson",
+    //   role: "Product Director at TechCorp",
+    //   content: `Working with Sahil was seamless from day one. Not only did they deliver a full-stack solution ahead of schedule, but they also communicated clearly throughout the project. It's rare to find a developer who understands both the tech and the business side so well`,
+    //   rating: 5,
+    //   image: "/testimonials/alex-johnson.png"
+    // },
+    // {
+    //   id: 2,
+    //   name: "Maria Chen",
+    //   role: "Senior UX Designer at DesignHub",
+    //   content: `I've reviewed hundreds of portfolios, and his work is truly exceptional. Tway the animations guide attention while maintaining performance is masterful. The gradient elements add depth without overwhelming.`,
+    //   rating: 5,
+    //   image: "/testimonials/maria-chen.png"
+    // },
+    // {
+    //   id: 3,
+    //   name: "David Wilson",
+    //   role: "CTO at Startup Ventures",
+    //   content: `From wireframes to deployment, Sahil owned the entire stack with confidence and creativity. The final product is fast, reliable, and looks incredible. I wouldn't hesitate to work with them again.`,
+    //   rating: 5,
+    //   image: "/testimonials/David Wilson.png"
+    // },
   ];
-
+   if (testimonials.length === 0) {
+    return null; // Don't render the section if there are no testimonials
+  }
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 640) {
@@ -155,18 +157,18 @@ export const TestimonialSection = () => {
               Client Feedback
               <Star className="h-3 w-3 sm:h-4 sm:w-4" />
             </motion.div>
-            <motion.h2
+            {/* <motion.h2
               className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight"
               variants={itemVariants}
             >
               What People Say
-            </motion.h2>
-            <motion.p
+            </motion.h2> */}
+            {/* <motion.p
               className="text-base sm:text-lg text-muted-foreground mt-3 sm:mt-4 max-w-2xl mx-auto"
               variants={itemVariants}
             >
               What Clients Will Say About Working with Me.
-            </motion.p>
+            </motion.p> */}
           </motion.div>
 
           <div className="relative">

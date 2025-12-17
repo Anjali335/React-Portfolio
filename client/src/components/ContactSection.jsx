@@ -136,7 +136,7 @@ export const ContactSection = () => {
                     href="mailto:codewithkinu@gmail.com"
                     className="text-sm sm:text-base font-medium hover:text-primary transition-colors"
                   >
-                    codewithkinu@gmail.com
+                    tiwarianjali0802@gmail.com
                   </a>
                 </div>
               </div>
@@ -151,20 +151,20 @@ export const ContactSection = () => {
                     href="tel:+919315145594"
                     className="text-sm sm:text-base font-medium hover:text-primary transition-colors"
                   >
-                    +91 9315145594
+                    +91 9359605151
                   </a>
                 </div>
               </div>
               
               <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 hover:bg-accent/30 rounded-lg sm:rounded-xl transition-all duration-300">
-                <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-primary/10 text-primary">
+                {/* <div className="p-2 sm:p-3 rounded-lg sm:rounded-xl bg-primary/10 text-primary">
                   <MapPin className="h-4 w-4 sm:h-5 sm:w-5" />
-                </div>
+                </div> */}
                 <div>
-                  <p className="text-xs sm:text-sm text-muted-foreground">Location</p>
+                  {/* <p className="text-xs sm:text-sm text-muted-foreground">Location</p>
                   <span className="text-sm sm:text-base font-medium">
                     Bengaluru, Karnataka India
-                  </span>
+                  </span> */}
                 </div>
               </div>
             </div>
@@ -173,26 +173,27 @@ export const ContactSection = () => {
               <h4 className="font-medium mb-3 sm:mb-4 text-xs sm:text-sm text-muted-foreground">Find me on</h4>
               <div className="flex gap-2 sm:gap-3">
                 {[
-                  {
-                    icon: Linkedin,
-                    label: "LinkedIn",
-                    url: "https://www.linkedin.com/in/codewithkinu",
-                  },
-                  {
-                    icon: Twitter,
-                    label: "Twitter",
-                    url: "#",
-                  },
-                  {
-                    icon: Github,
-                    label: "GitHub",
-                    url: "https://github.com/Sahilmd01",
-                  },
-                  {
-                    icon: Instagram,
-                    label: "Instagram",
-                    url: "https://www.instagram.com/dubbinut",
-                  },
+                  // {
+                  //   icon: Linkedin,
+                  //   label: "LinkedIn",
+                  //   url: "https://www.linkedin.com/in/codewithkinu",
+                  // },
+                  // {
+                  //   icon: Twitter,
+                  //   label: "Twitter",
+                  
+                  //   url: "#",
+                  // },
+                  // {
+                  //   icon: Github,
+                  //   label: "GitHub",
+                  //   url: "https://github.com/Sahilmd01",
+                  // },
+                  // {
+                  //   icon: Instagram,
+                  //   label: "Instagram",
+                  //   url: "https://www.instagram.com/dubbinut",
+                  // },
                 ].map((social, index) => (
                   <a
                     key={index}

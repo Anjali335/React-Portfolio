@@ -5,120 +5,136 @@ import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion"
 const projects = [
   {
     id: 8,
-    title: "GenAxis",
-    category: "AI SaaS ",
-    description: "AI saas webapp build with PERN stack and Intigrated Gemini . OPEN SOURCE ",
-    image: "/projects/project8.png",
-    video: "/projects/videos/genaxix-demo.mp4",
-    tags: ["PERN Stack", "Clerk Auth", "Google Gemini", "Clerk Billing", "OPEN SOURCE"],
-    demoUrl: "https://genaxis.vercel.app",
-    githubUrl: "https://github.com/Sahilmd01/genaxis",
-    featured: true,
-    accentColor: "from-emerald-500 to-teal-600",
-    status: "Live",
-    highlights: ["Image Generation", "Article writer", "Blog Writter","Resume Reviewer"]
+  title: "Codathor",
+  // category: "EdTech / Coding Platform",
+  description: "A front-end coding platform / showcase site (HTML/CSS/JS) containing pages for competitions, job listings, and project showcases — built as a static website to present coding resources and projects.",
+  // image: "/projects/codathor-preview.png",
+  
+  tags: ["HTML", "CSS", "JavaScript"],
+  demoUrl: "https://codathorweb.netlify.app/", 
+  githubUrl: "https://github.com/Anjali335/Codathor",
+  accentColor: "from-indigo-500 to-violet-600",
+  status: "Live",
+  showDemo:true,
+    highlights: [
+    "Multiple static pages (index, competitions, jobs, final project)",
+    "Clean HTML/CSS structure with separate JS files",
+    "Good for a portfolio / coding showcase"]
   },
   {
     id: 7,
-    title: "NauraCare",
-    category: "Healthcare SaaS",
-    description: "Hospital management platform with multi-role access, patient tracking, and billing systems.",
-    image: "/projects/project7.png",
-    video: "/projects/videos/nauracare-demo.mp4",
-    tags: ["React", "Node.js", "MongoDB", "Stripe", "JWT Auth"],
-    demoUrl: "https://nauracare.vercel.app",
-    githubUrl: "https://github.com/Sahilmd01/neuracare",
-    featured: true,
-    accentColor: "from-emerald-500 to-teal-600",
-    status: "Live",
-    highlights: ["Multi-role system", "Patient management", "Payment integration"]
+  title: "Universal Human Detection System",
+  category: "Computer Vision / AI",
+  description: "Human detection system using deep learning / computer vision — detects humans in images or video streams for surveillance/analysis.",
+  image: "/projects/universal-human-detection-system-preview.png",       // Add preview screenshot manually
+  video: "/projects/videos/universal-human-detection-system-demo.mp4",  // Add demo video manually if exists
+  tags: ["Python", "OpenCV", "YOLO", "Object Detection"],               // adjust tags as per actual implementation
+  // showDemo: false,                                                       // no live demo found — fill if you deploy
+  githubUrl: "https://github.com/Anjali335/universal-human-detection-system",
+  featured: false,  // you can mark true if you want it featured
+  accentColor: "from-blue-500 to-indigo-600",  // you can change based on your UI theme
+  status: "Repository",  // Or "Work in Progress / Prototype" depending on state
+  highlights: [
+    "Human detection using computer vision / deep learning",
+    "Detects people in images/videos — useful for surveillance or analytics",
+    "Open-source — you can extend or integrate with other systems"]
   },
   {
     id: 1,
-    title: "Vante & Co.",
-    category: "E-commerce",
-    description: "Fashion marketplace with product recommendations and seamless checkout experience.",
-    image: "/projects/project1.png",
-    video: "/projects/videos/vante-demo.mp4",
-    tags: ["React", "Node.js", "Stripe", "Redis"],
-    demoUrl: "https://e-commerce-website-4w6a.vercel.app",
-    githubUrl: "https://github.com/Sahilmd01/E-commerce-website",
-    featured: true,
-    accentColor: "from-purple-500 to-indigo-600",
-    status: "Live",
-    highlights: ["Product catalog", "Shopping cart", "Payment processing"]
+  title: "Skill-based Suggestions",
+  category: "Career / Recommendation System",
+  description: "A skill-based suggestion system — recommends suitable skills/paths based on user input (skills, interests or background). Useful for guiding learners or job-seekers to relevant skills.",
+  image: "/projects/skill-based-suggestions-preview.png",    // add a preview screenshot manually
+  video: "/projects/videos/skill-based-suggestions-demo.mp4", // if you have a demo video — else leave empty
+  tags: ["Python", "Machine Learning", "Flask", "Web App"],  // adjust if you used different tech stack
+  // demoUrl: "",  // no live demo detected — add if you deploy the app somewhere
+  githubUrl: "https://github.com/Anjali335/Skill-based-suggestions",
+  featured: false,  // set true if you want to highlight this project on portfolio
+  accentColor: "from-blue-500 to-cyan-600",  // can change as per your site’s theme
+  status: "Repository",  // Or "Prototype / Work-in-Progress" depending on its state
+  highlights: [
+    "Takes user skills/preferences as input and recommends relevant skills/paths",
+    "Built as a web-application (backend + frontend) — easy to use and extend",
+    "Useful for students or job-seekers to plan their learning or career path"
+  ]
   },
   {
-    id: 2,
-    title: "Converse Pro",
-    category: "Real-time Communication",
-    description: "Chat platform with real-time messaging, media sharing, and user authentication.",
-    image: "/projects/project2.png",
-    video: "/projects/videos/converse-demo.mp4",
-    tags: ["Socket.IO", "MongoDB", "React", "WebRTC"],
-    demoUrl: "https://converse-pro-frontend.vercel.app",
-    githubUrl: "https://github.com/Sahilmd01/converse-pro",
-    featured: true,
-    accentColor: "from-blue-500 to-cyan-600",
-    status: "Live",
-    highlights: ["Real-time chat", "Media sharing", "User authentication"]
+   id: 2,
+  title: "Amazon Clone",
+  category: "E-commerce",
+  description: "A frontend clone of Amazon featuring product listings, navigation bar, banner sections, and interactive UI components.",
+  image: "/projects/amazon-clone-preview.png", 
+  video: "/projects/videos/amazon-clone-demo.mp4",
+  tags: ["HTML", "CSS", "JavaScript"], 
+  // demoUrl: "",   // add if you deploy on Vercel / GitHub Pages
+  githubUrl: "https://github.com/Anjali335/amazon-clone",
+  featured: false,   // set true if you want to highlight it
+  accentColor: "from-yellow-500 to-amber-600",
+  status: "Repository",
+  highlights: [
+    "Amazon-style homepage UI",
+    "Reusable product card components",
+    "Fully responsive layout"]
   },
   {
-    id: 3,
-    title: "Blogni AI",
-    category: "Artificial Intelligence",
-    description: "AI-powered content generation platform with multi-language support.",
-    image: "/projects/project3.png",
-    video: "/projects/videos/blogni-demo.mp4",
-    tags: ["Next.js", "Gemini AI", "Clerk Auth", "Redis"],
-    demoUrl: "https://blogni.vercel.app",
-    githubUrl: "https://github.com/Sahilmd01/Blogni",
-    accentColor: "from-amber-500 to-orange-600",
-    status: "Live",
-    highlights: ["AI content generation", "Multi-language", "User accounts"]
+     id: 3,
+  title: "Python Programs Collection",
+  category: "Programming / Algorithms",
+  description: "A collection of Python programs covering basics, algorithms, problem-solving, and utility scripts — ideal for beginners and practice.",
+  image: "/projects/python-programs-preview.png",
+  video: "/projects/videos/python-programs-demo.mp4",
+  tags: ["Python", "DSA", "Algorithms", "Scripting"],
+  // demoUrl: "",  // no live demo needed — this is a code-based project
+  githubUrl: "https://github.com/Anjali335/python-programs",
+  accentColor: "from-green-500 to-emerald-600",
+  status: "Repository",
+  highlights: [
+    "Includes multiple Python scripts",
+    "Covers basics to intermediate problem-solving",
+    "Great for DSA and logic-building practice"]
   },
-  {
-    id: 4,
-    title: "Spendlix",
-    category: "FinTech",
-    description: "Financial tracking platform with expense management and budgeting features.",
-    image: "/projects/project4.png",
-    video: "/projects/videos/spendlix-demo.mp4",
-    tags: ["React", "Chart.js", "Node.js", "Firebase"],
-    demoUrl: "https://spendlix.vercel.app/login",
-    githubUrl: "https://github.com/Sahilmd01/Spendlix",
-    accentColor: "from-rose-500 to-pink-600",
-    status: "Live",
-    highlights: ["Expense tracking", "Data visualization", "Budget planning"]
-  },
-  {
-    id: 5,
-    title: "Eattoo",
-    category: "Food Tech",
-    description: "Food delivery platform with restaurant listings and order management.",
-    image: "/projects/project5.png",
-    video: "/projects/videos/eattoo-demo.mp4",
-    tags: ["React", "Redux", "Mapbox", "Stripe"],
-    demoUrl: "https://eattoo-food-delivery-website-frontend.onrender.com/",
-    githubUrl: "https://github.com/Sahilmd01/Eattoo-food-delivery-website",
-    accentColor: "from-violet-500 to-purple-600",
-    status: "Live",
-    highlights: ["Restaurant listings", "Order system", "Location services"]
-  },
-  {
-    id: 6,
-    title: "JobQue",
-    category: "HR Tech",
-    description: "Job matching platform with candidate tracking and application management.",
-    image: "/projects/project6.png",
-    video: "/projects/videos/jobque-demo.mp4",
-    tags: ["Next.js", "PostgreSQL", "Redis", "AI Integration"],
-    demoUrl: "#",
-    githubUrl: "#",
-    accentColor: "from-orange-500 to-red-600",
-    status: "Development",
-    highlights: ["Job matching", "Candidate tracking", "Application system"]
-  }
+//   {
+//     id: 4,
+//     title: "Spendlix",
+//     category: "FinTech",
+//     description: "Financial tracking platform with expense management and budgeting features.",
+//     image: "/projects/project4.png",
+//     video: "/projects/videos/spendlix-demo.mp4",
+//     tags: ["React", "Chart.js", "Node.js", "Firebase"],
+//     demoUrl: "https://spendlix.vercel.app/login",
+//     githubUrl: "https://github.com/Sahilmd01/Spendlix",
+//     accentColor: "from-rose-500 to-pink-600",
+//     status: "Live",
+//     highlights: ["Expense tracking", "Data visualization", "Budget planning"]
+//   },
+//   {
+//     id: 5,
+//     title: "Eattoo",
+//     category: "Food Tech",
+//     description: "Food delivery platform with restaurant listings and order management.",
+//     image: "/projects/project5.png",
+//     video: "/projects/videos/eattoo-demo.mp4",
+//     tags: ["React", "Redux", "Mapbox", "Stripe"],
+//     demoUrl: "https://eattoo-food-delivery-website-frontend.onrender.com/",
+//     githubUrl: "https://github.com/Sahilmd01/Eattoo-food-delivery-website",
+//     accentColor: "from-violet-500 to-purple-600",
+//     status: "Live",
+//     highlights: ["Restaurant listings", "Order system", "Location services"]
+//   },
+//   {
+//     id: 6,
+//     title: "JobQue",
+//     category: "HR Tech",
+//     description: "Job matching platform with candidate tracking and application management.",
+//     image: "/projects/project6.png",
+//     video: "/projects/videos/jobque-demo.mp4",
+//     tags: ["Next.js", "PostgreSQL", "Redis", "AI Integration"],
+//     demoUrl: "#",
+//     githubUrl: "#",
+//     accentColor: "from-orange-500 to-red-600",
+//     status: "Development",
+//     highlights: ["Job matching", "Candidate tracking", "Application system"]
+//   }
 ];
 
 const categoryColors = {
@@ -162,17 +178,17 @@ export const ProjectsSection = () => {
     setIsMobileFilterOpen(false);
   };
 
-  const handleVideoPlay = (project) => {
-    setSelectedVideo(project);
-  };
+  // const handleVideoPlay = (project) => {
+  //   setSelectedVideo(project);
+  // };
 
-  const handleCloseVideo = () => {
-    setSelectedVideo(null);
-    if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-    }
-  };
+  // const handleCloseVideo = () => {
+  //   setSelectedVideo(null);
+  //   if (videoRef.current) {
+  //     videoRef.current.pause();
+  //     videoRef.current.currentTime = 0;
+  //   }
+  // };
 
   const ProjectHighlights = ({ highlights }) => (
     <div className="space-y-2">
@@ -321,14 +337,14 @@ export const ProjectsSection = () => {
                       animate={{ opacity: hoveredProject === project.id ? 1 : 0 }}
                     >
                       {/* Video Play Button */}
-                      <motion.button
+                      {/* <motion.button
                         onClick={() => handleVideoPlay(project)}
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         className="p-3 rounded-full backdrop-blur-sm border bg-white/20 text-white border-white/30 hover:bg-white/30 transition-all duration-300"
                       >
                         <Play size={20} />
-                      </motion.button>
+                      </motion.button> */}
                       
                       {/* Code Button */}
                       <motion.a
@@ -393,42 +409,43 @@ export const ProjectsSection = () => {
                     </div>
 
                     {/* Action Buttons */}
-                    <div className="flex gap-3 pt-4 border-t border-border">
-                      <motion.a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className={`flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
-                          project.demoUrl === "#"
-                            ? "bg-muted text-muted-foreground cursor-not-allowed border border-border"
-                            : "bg-primary text-primary-foreground hover:bg-primary/90"
-                        }`}
-                        onClick={(e) => project.demoUrl === "#" && e.preventDefault()}
-                      >
-                        <Eye size={16} />
-                        {project.demoUrl === "#" ? "Coming Soon" : "Live Demo"}
-                      </motion.a>
-                      
-                      <motion.a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.02 }}
-                        whileTap={{ scale: 0.98 }}
-                        className={`inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium border transition-all duration-300 ${
-                          project.githubUrl === "#"
-                            ? "bg-muted text-muted-foreground cursor-not-allowed border-border"
-                            : "bg-background text-foreground border-border hover:border-primary hover:bg-primary/5"
-                        }`}
-                        onClick={(e) => project.githubUrl === "#" && e.preventDefault()}
-                      >
-                        <Github size={16} />
-                        Code
-                      </motion.a>
-                    </div>
-                  </div>
+                  <div className="flex gap-3 pt-4 border-t border-border">
+
+  {/* SHOW DEMO BUTTON ONLY IF showDemo IS TRUE */}
+  {project.showDemo && (
+    <motion.a
+      href={project.demoUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className={`flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-medium transition-all duration-300 ${
+        project.demoUrl === "#"
+          ? "bg-muted text-muted-foreground cursor-not-allowed border border-border"
+          : "bg-primary text-primary-foreground hover:bg-primary/90"
+      }`}
+      onClick={(e) => project.demoUrl === "#" && e.preventDefault()}
+    >
+      <Eye size={16} />
+      {project.demoUrl === "#" ? "Coming Soon" : "Live Demo"}
+    </motion.a>
+  )}
+
+  {/* CODE BUTTON ALWAYS SHOWS */}
+  <motion.a
+    href={project.githubUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.02 }}
+    whileTap={{ scale: 0.98 }}
+    className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg text-sm font-medium border border-border hover:border-primary hover:bg-primary/5 transition-all duration-300"
+  >
+    <Github size={16} />
+    Code
+  </motion.a>
+
+</div>
+</div>
 
                   {/* Accent Border */}
                   <div className={`h-1 bg-gradient-to-r ${project.accentColor}`} />
@@ -488,7 +505,7 @@ export const ProjectsSection = () => {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6"
             >
               <Zap className="h-4 w-4" />
-              Get In Touch
+              {/* Get In Touch */}
             </motion.div>
 
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Like what you see?</h3>
@@ -508,7 +525,7 @@ export const ProjectsSection = () => {
               </motion.a>
               
               <motion.a
-                href="https://github.com/sahilmd01"
+                href="https://github.com/Anjali335"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
